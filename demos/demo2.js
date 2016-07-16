@@ -19,3 +19,6 @@ db.open('mongodb://localhost/learn_mongoose',function(err){
     kitty.save(console.log);
   }
 });
+db.on('connected',function(){
+  console.log('connected');
+});
