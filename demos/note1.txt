@@ -3,3 +3,7 @@ kitty.save(function(err,cat,row){
 });
 kitty.save(console.log);
 db.cats.find({age:{$gte:6}},{_id:0,__v:0});
+
+db.cats.getIndexes()
+db.cats.getIndexSpecs()
+db.cats.insert({name:'lucky',age:5})
