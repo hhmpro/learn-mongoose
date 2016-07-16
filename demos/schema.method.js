@@ -4,6 +4,14 @@ var ToySchema = new Schema;
 ToySchema.method('meow',function(){
   console.log('meeeeoooooow');
 });
+ToySchema.method({
+  purr:function(){
+    console.log('purr');
+  },
+  scratch:function(){
+    console.log('scratch')
+  }
+});
 
 ToySchema.add({
   name:String,
@@ -17,3 +25,5 @@ var toy1 = new Toy({
   price:'22'
 });
 toy1.meow();
+toy1.purr();
+toy1.scratch();
