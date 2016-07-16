@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/learn_mongoose');
 var Schema = mongoose.Schema;
 var ChildSchema = new Schema({name:String,age:Number});
 
@@ -25,4 +26,5 @@ var toy = new Toy({
   }]
 });
 console.log('toy:',toy);
+toy.save(console.log);
 // ChildSchema里没有children，toy对象里也没有，即使传了children
